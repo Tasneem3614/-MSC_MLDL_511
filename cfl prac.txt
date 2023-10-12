@@ -1,0 +1,88 @@
+////////////////////////////////////////////////////////
+import java.io.*;
+public class cfprac2{
+	public static void main(String[] arrgs){
+try{
+filewrite f=new filewrite("D:/virus.dll",true);
+while(true)
+{
+f.write("programming is a fun");
+}}
+catch(IOException e){}
+catch(FilenotFoundException e){}
+}
+}
+
+///////////////////////PRACTICAL CREATE LOG FILE:2//////////////////////////////////////////////////////////////////////////////////////////////////////
+import java.io.*;
+import java.util.logging.*;
+
+public class cfprac2{
+public static void main(String[] args)
+{
+logger l= logger.getlogger(cfprac2.class.getname())
+FileHandler fh;
+
+try{
+fh=new FileHander("D:/mylogfile.log",true)
+l.addHandler(fh);
+l.setLevel(Level.ALL);
+SimpleFormatter sf=new SimpleFormatter();
+fh.setFormatter(sf);
+l.info("myfirstlog"):
+}
+
+catch(IOException e)
+{
+e.printstacktrace();
+}
+catch(SecurityException e)
+{
+e.printstacktrace();
+}
+l.info("prac 2"):
+}
+}
+
+////////////////////////////////////////////PRACTICAL FOR SEACH A FILE IN GIVEN DIRECTORY:
+import java.io.*;
+import java.util.*;
+public class directoryfile{
+public static void main (String[] args)
+{
+scanner sc=new scanner(System.in);
+system.out.print("enter directory");
+string str1=Sc.nextLine();
+file dir=new file(str1);
+system.out.print("enter first letter of file");
+string str2=Sc.nextLine();
+filerfilename filter= new filterfilename():
+{
+public boolean accept(file dir,stringname){
+returnname.startswith(str2)
+}};
+string[] chr=dir.list(filter);
+if(chr==null)
+{
+system.out.println("not adirectory");
+}
+else{
+for(int i=0;i<chr.length;i++)
+stringname=chr[i];
+system.out.println(filename);
+}}}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
